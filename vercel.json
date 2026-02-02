@@ -1,0 +1,10 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "next build",
+  "outputDirectory": ".next",
+  "env": {
+    "N8N_BASE_URL": "",
+    "N8N_API_KEY": "",
+    "DIFFY_BASE_URL": ""
+  }
+}
