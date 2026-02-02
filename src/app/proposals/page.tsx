@@ -21,7 +21,7 @@ const statusColors: Record<string, string> = {
 export default function ProposalsPage() {
   const [proposals, setProposals] = useState<Proposal[]>(mockProposals);
   const [showForm, setShowForm] = useState(false);
-  const [form, setForm] = useState({ title: "", description: "", category: "", priority: "medium" as const, tags: "" });
+  const [form, setForm] = useState<{ title: string; description: string; category: string; priority: "low" | "medium" | "high" | "critical"; tags: string }>({ title: "", description: "", category: "", priority: "medium", tags: "" });
 
   useEffect(() => {
     fetch("/api/proposals").then((r) => r.json()).then(setProposals).catch(() => {});
